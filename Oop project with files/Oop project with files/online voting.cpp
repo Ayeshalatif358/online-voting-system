@@ -4,6 +4,8 @@
 #include"voter.h"
 #include"candidate.h"
 #include"admin.h"
+#include"local.h"
+#include"constituency.h"
 #include"election.h"
 #include"general.h"
 #include"national.h"
@@ -13,26 +15,22 @@ void elections();
 void admin_menu();
 int main()
 {
-	admin Admin1;
-	menu(Admin1);
-	election E1;
-	cin >> E1;
-	return 0;
+    return 0;
 }
 void menu(admin& A)
 {
-	int choice;
-	cout << "1. Admin\n2. Candidate\n3. Voter\nEner choice";
-	cin >> choice;
-	switch (choice)
-	{
-	case 1:
-	{
-		cin >> A;
+    int choice;
+    cout << "1. Admin\n2. Candidate\n3. Voter\nEner choice";
+    cin >> choice;
+    switch (choice)
+    {
+    case 1:
+    {
+        cin >> A;
         admin_menu();
-		break;
-	}
-	}
+        break;
+    }
+    }
 }
 void elections()
 {

@@ -39,6 +39,12 @@
     <ClCompile Include="national.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="constituency.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="local.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="user.h">
@@ -60,6 +66,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="national.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="local.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="constituency.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

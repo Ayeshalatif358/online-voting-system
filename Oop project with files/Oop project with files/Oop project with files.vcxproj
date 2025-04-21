@@ -129,8 +129,10 @@
   <ItemGroup>
     <ClCompile Include="admin.cpp" />
     <ClCompile Include="candidate.cpp" />
+    <ClCompile Include="constituency.cpp" />
     <ClCompile Include="election.cpp" />
     <ClCompile Include="general.cpp" />
+    <ClCompile Include="local.cpp" />
     <ClCompile Include="national.cpp" />
     <ClCompile Include="online voting.cpp" />
     <ClCompile Include="user.cpp" />
@@ -139,8 +141,10 @@
   <ItemGroup>
     <ClInclude Include="admin.h" />
     <ClInclude Include="candidate.h" />
+    <ClInclude Include="constituency.h" />
     <ClInclude Include="election.h" />
     <ClInclude Include="general.h" />
+    <ClInclude Include="local.h" />
     <ClInclude Include="national.h" />
     <ClInclude Include="user.h" />
     <ClInclude Include="voter.h" />

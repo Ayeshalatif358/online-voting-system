@@ -73,6 +73,7 @@ string candidate::getArea() const { return area; }
 string candidate::getPosition() const { return position; }
 int candidate::getnoOfvotes() const { return noOfvotes; }
 string candidate::getBio() const { return bio; }
+Code* candidate::getcons() { return code; }
 void candidate::setcandidate(string n, string p, string a, string P, string b, int no) {
 	party = p; name = n;
 	area = a; position = P;  noOfvotes = no;
