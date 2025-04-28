@@ -3,24 +3,52 @@
   "WorkspaceRootPath": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\admin.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|solutionrelative:Oop project with files\\admin.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\election.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|solutionrelative:Oop project with files\\election.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\candidate.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|solutionrelative:Oop project with files\\candidate.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\online voting.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|solutionrelative:Oop project with files\\online voting.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\local.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|solutionrelative:Oop project with files\\local.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\user.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|solutionrelative:Oop project with files\\user.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\candidate.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|solutionrelative:Oop project with files\\candidate.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\admin.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|solutionrelative:Oop project with files\\admin.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\election.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|solutionrelative:Oop project with files\\election.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\general.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|solutionrelative:Oop project with files\\general.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\constituency.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|solutionrelative:Oop project with files\\constituency.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\voter.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|solutionrelative:Oop project with files\\voter.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\candidate.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|solutionrelative:Oop project with files\\candidate.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\user.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|solutionrelative:Oop project with files\\user.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\national.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|solutionrelative:Oop project with files\\national.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\local.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -35,48 +63,20 @@
       "RelativeMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|solutionrelative:Oop project with files\\constituency.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\candidate.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|solutionrelative:Oop project with files\\candidate.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\constituency.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|solutionrelative:Oop project with files\\constituency.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\national.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|solutionrelative:Oop project with files\\national.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\election.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|solutionrelative:Oop project with files\\election.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\election.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|solutionrelative:Oop project with files\\election.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\national.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|solutionrelative:Oop project with files\\national.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\admin.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|solutionrelative:Oop project with files\\admin.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\admin.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|solutionrelative:Oop project with files\\admin.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\user.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|solutionrelative:Oop project with files\\user.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\user.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|solutionrelative:Oop project with files\\user.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\local.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|solutionrelative:Oop project with files\\local.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\voter.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|solutionrelative:Oop project with files\\voter.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\voter.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C7F1BDBD-499C-4279-8471-531D734F39F1}|Oop project with files\\Oop project with files.vcxproj|solutionrelative:Oop project with files\\voter.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -86,7 +86,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -102,104 +102,78 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "local.cpp",
-              "DocumentMoniker": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\local.cpp",
-              "RelativeDocumentMoniker": "Oop project with files\\local.cpp",
-              "ToolTip": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\local.cpp*",
-              "RelativeToolTip": "Oop project with files\\local.cpp*",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAIwGMAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-21T16:38:43.439Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "constituency.cpp",
-              "DocumentMoniker": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\constituency.cpp",
-              "RelativeDocumentMoniker": "Oop project with files\\constituency.cpp",
-              "ToolTip": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\constituency.cpp*",
-              "RelativeToolTip": "Oop project with files\\constituency.cpp*",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAIwBsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-21T16:38:36.982Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "constituency.h",
-              "DocumentMoniker": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\constituency.h",
-              "RelativeDocumentMoniker": "Oop project with files\\constituency.h",
-              "ToolTip": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\constituency.h*",
-              "RelativeToolTip": "Oop project with files\\constituency.h*",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAIwBUAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-21T16:38:28.149Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "local.h",
-              "DocumentMoniker": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\local.h",
-              "RelativeDocumentMoniker": "Oop project with files\\local.h",
-              "ToolTip": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\local.h*",
-              "RelativeToolTip": "Oop project with files\\local.h*",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAIwBUAAAAAAAAAAAAAAA==",
+              "Title": "candidate.h",
+              "DocumentMoniker": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\candidate.h",
+              "RelativeDocumentMoniker": "Oop project with files\\candidate.h",
+              "ToolTip": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\candidate.h",
+              "RelativeToolTip": "Oop project with files\\candidate.h",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAoAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-21T16:38:17.204Z",
+              "WhenOpened": "2025-04-15T15:48:35.073Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "general.h",
-              "DocumentMoniker": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\general.h",
-              "RelativeDocumentMoniker": "Oop project with files\\general.h",
-              "ToolTip": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\general.h*",
-              "RelativeToolTip": "Oop project with files\\general.h*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAIwBEAAAAAAAAAAAAAAA==",
+              "Title": "admin.h",
+              "DocumentMoniker": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\admin.h",
+              "RelativeDocumentMoniker": "Oop project with files\\admin.h",
+              "ToolTip": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\admin.h",
+              "RelativeToolTip": "Oop project with files\\admin.h",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAIwBYAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-15T15:48:25.191Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "candidate.cpp",
-              "DocumentMoniker": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\candidate.cpp",
-              "RelativeDocumentMoniker": "Oop project with files\\candidate.cpp",
-              "ToolTip": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\candidate.cpp*",
-              "RelativeToolTip": "Oop project with files\\candidate.cpp*",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAIwFQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-15T15:46:33Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "general.cpp",
-              "DocumentMoniker": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\general.cpp",
-              "RelativeDocumentMoniker": "Oop project with files\\general.cpp",
-              "ToolTip": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\general.cpp*",
-              "RelativeToolTip": "Oop project with files\\general.cpp*",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAIwFUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-15T15:46:16.114Z",
+              "WhenOpened": "2025-04-15T15:47:51.511Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "admin.cpp",
+              "DocumentMoniker": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\admin.cpp",
+              "RelativeDocumentMoniker": "Oop project with files\\admin.cpp",
+              "ToolTip": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\admin.cpp*",
+              "RelativeToolTip": "Oop project with files\\admin.cpp*",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAGEAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-15T15:45:53.282Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "election.cpp",
+              "DocumentMoniker": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\election.cpp",
+              "RelativeDocumentMoniker": "Oop project with files\\election.cpp",
+              "ToolTip": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\election.cpp",
+              "RelativeToolTip": "Oop project with files\\election.cpp",
+              "ViewState": "AgIAACwAAAAAAAAAAAD4vzYAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-15T15:46:06.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "user.cpp",
+              "DocumentMoniker": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\user.cpp",
+              "RelativeDocumentMoniker": "Oop project with files\\user.cpp",
+              "ToolTip": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\user.cpp",
+              "RelativeToolTip": "Oop project with files\\user.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAIwBIAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-15T15:45:45.448Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "online voting.cpp",
               "DocumentMoniker": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\online voting.cpp",
               "RelativeDocumentMoniker": "Oop project with files\\online voting.cpp",
-              "ToolTip": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\online voting.cpp*",
-              "RelativeToolTip": "Oop project with files\\online voting.cpp*",
-              "ViewState": "AgIAACsAAAAAAAAAAAAIwD0AAAABAAAAAAAAAA==",
+              "ToolTip": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\online voting.cpp",
+              "RelativeToolTip": "Oop project with files\\online voting.cpp",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABcAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-15T15:49:06.637Z",
               "EditorCaption": ""
@@ -207,55 +181,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "candidate.h",
-              "DocumentMoniker": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\candidate.h",
-              "RelativeDocumentMoniker": "Oop project with files\\candidate.h",
-              "ToolTip": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\candidate.h*",
-              "RelativeToolTip": "Oop project with files\\candidate.h*",
-              "ViewState": "AgIAABkAAAAAAAAAAAAIwCsAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-15T15:48:35.073Z",
+              "Title": "general.cpp",
+              "DocumentMoniker": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\general.cpp",
+              "RelativeDocumentMoniker": "Oop project with files\\general.cpp",
+              "ToolTip": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\general.cpp",
+              "RelativeToolTip": "Oop project with files\\general.cpp",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAIwFEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-15T15:46:16.114Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "admin.h",
-              "DocumentMoniker": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\admin.h",
-              "RelativeDocumentMoniker": "Oop project with files\\admin.h",
-              "ToolTip": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\admin.h",
-              "RelativeToolTip": "Oop project with files\\admin.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-15T15:47:51.511Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "admin.cpp",
-              "DocumentMoniker": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\admin.cpp",
-              "RelativeDocumentMoniker": "Oop project with files\\admin.cpp",
-              "ToolTip": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\admin.cpp",
-              "RelativeToolTip": "Oop project with files\\admin.cpp",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "candidate.cpp",
+              "DocumentMoniker": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\candidate.cpp",
+              "RelativeDocumentMoniker": "Oop project with files\\candidate.cpp",
+              "ToolTip": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\candidate.cpp",
+              "RelativeToolTip": "Oop project with files\\candidate.cpp",
+              "ViewState": "AgIAADIAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-15T15:45:53.282Z"
+              "WhenOpened": "2025-04-15T15:46:33Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "user.h",
-              "DocumentMoniker": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\user.h",
-              "RelativeDocumentMoniker": "Oop project with files\\user.h",
-              "ToolTip": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\user.h",
-              "RelativeToolTip": "Oop project with files\\user.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAGAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "election.h",
+              "DocumentMoniker": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\election.h",
+              "RelativeDocumentMoniker": "Oop project with files\\election.h",
+              "ToolTip": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\election.h",
+              "RelativeToolTip": "Oop project with files\\election.h",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAIwFMAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-15T15:47:14.545Z"
+              "WhenOpened": "2025-04-15T15:48:15.354Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "national.h",
               "DocumentMoniker": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\national.h",
               "RelativeDocumentMoniker": "Oop project with files\\national.h",
@@ -263,59 +227,116 @@
               "RelativeToolTip": "Oop project with files\\national.h",
               "ViewState": "AgIAAAEAAAAAAAAAAAAqwAUAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-15T16:38:20.652Z"
+              "WhenOpened": "2025-04-15T16:38:20.652Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "voter.h",
+              "DocumentMoniker": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\voter.h",
+              "RelativeDocumentMoniker": "Oop project with files\\voter.h",
+              "ToolTip": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\voter.h",
+              "RelativeToolTip": "Oop project with files\\voter.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-15T15:48:01.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "user.h",
+              "DocumentMoniker": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\user.h",
+              "RelativeDocumentMoniker": "Oop project with files\\user.h",
+              "ToolTip": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\user.h",
+              "RelativeToolTip": "Oop project with files\\user.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-15T15:47:14.545Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "local.h",
+              "DocumentMoniker": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\local.h",
+              "RelativeDocumentMoniker": "Oop project with files\\local.h",
+              "ToolTip": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\local.h",
+              "RelativeToolTip": "Oop project with files\\local.h",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAIwA8AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-21T16:38:17.204Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "general.h",
+              "DocumentMoniker": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\general.h",
+              "RelativeDocumentMoniker": "Oop project with files\\general.h",
+              "ToolTip": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\general.h",
+              "RelativeToolTip": "Oop project with files\\general.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-15T15:48:25.191Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "constituency.h",
+              "DocumentMoniker": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\constituency.h",
+              "RelativeDocumentMoniker": "Oop project with files\\constituency.h",
+              "ToolTip": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\constituency.h",
+              "RelativeToolTip": "Oop project with files\\constituency.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-21T16:38:28.149Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "constituency.cpp",
+              "DocumentMoniker": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\constituency.cpp",
+              "RelativeDocumentMoniker": "Oop project with files\\constituency.cpp",
+              "ToolTip": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\constituency.cpp",
+              "RelativeToolTip": "Oop project with files\\constituency.cpp",
+              "ViewState": "AgIAABwAAAAAAAAAAAAIwCoAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-21T16:38:36.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "national.cpp",
               "DocumentMoniker": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\national.cpp",
               "RelativeDocumentMoniker": "Oop project with files\\national.cpp",
               "ToolTip": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\national.cpp",
               "RelativeToolTip": "Oop project with files\\national.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAEAAAAAAAAAAAAD4vwsAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-15T16:35:55.311Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "election.h",
-              "DocumentMoniker": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\election.h",
-              "RelativeDocumentMoniker": "Oop project with files\\election.h",
-              "ToolTip": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\election.h",
-              "RelativeToolTip": "Oop project with files\\election.h",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAYAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-15T15:48:15.354Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "election.cpp",
-              "DocumentMoniker": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\election.cpp",
-              "RelativeDocumentMoniker": "Oop project with files\\election.cpp",
-              "ToolTip": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\election.cpp",
-              "RelativeToolTip": "Oop project with files\\election.cpp",
-              "ViewState": "AgIAAHAAAAAAAAAAAAApwH8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-15T15:46:06.517Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "user.cpp",
-              "DocumentMoniker": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\user.cpp",
-              "RelativeDocumentMoniker": "Oop project with files\\user.cpp",
-              "ToolTip": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\user.cpp",
-              "RelativeToolTip": "Oop project with files\\user.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-15T15:45:45.448Z"
+              "WhenOpened": "2025-04-15T16:35:55.311Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
+              "Title": "local.cpp",
+              "DocumentMoniker": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\local.cpp",
+              "RelativeDocumentMoniker": "Oop project with files\\local.cpp",
+              "ToolTip": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\local.cpp",
+              "RelativeToolTip": "Oop project with files\\local.cpp",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAIwFsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-21T16:38:43.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "voter.cpp",
               "DocumentMoniker": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\voter.cpp",
               "RelativeDocumentMoniker": "Oop project with files\\voter.cpp",
@@ -324,18 +345,6 @@
               "ViewState": "AgIAAA0AAAAAAAAAAAAowA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-15T15:46:00.105Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "voter.h",
-              "DocumentMoniker": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\voter.h",
-              "RelativeDocumentMoniker": "Oop project with files\\voter.h",
-              "ToolTip": "E:\\2024-CS-726(final)\\2024-CS-726\\Oop project with files\\Oop project with files\\voter.h",
-              "RelativeToolTip": "Oop project with files\\voter.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-15T15:48:01.557Z"
             }
           ]
         }

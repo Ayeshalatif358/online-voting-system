@@ -9,13 +9,10 @@
 using namespace std;
 class local_election :public election
 {
-	Code* code;
-	int mna_count;
 public:
-	void setcandidate();
+	//void setcandidate();
 	void setn_Code();
 	Code* getUniquecode();
 	void select_mna();
-	void assign_mna();
 };
 #endif

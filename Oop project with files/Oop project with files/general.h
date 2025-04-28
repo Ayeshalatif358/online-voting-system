@@ -4,13 +4,13 @@
 #include<iostream>
 #include<string>
 #include"election.h"
+#include"constituency.h"
 using namespace std;
 class general_election :public election
 {
-	Code* code;
 public:
 	general_election();
-	void setcandidate();
+	//void setcandidate();
 	Code* getUniquecode();
 	void select_mpa();
 };

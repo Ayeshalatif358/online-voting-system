@@ -6,28 +6,28 @@
 #include"general.h"
 #include"voter.h"
 using namespace std;
-void local_election::setcandidate() {
-	int size;
-	size = candidate_no + 1;
-	C = new candidate * [size];
-	candidate** cand = new candidate * [size];
-	for (int i = 0;i < size;i++)
-	{
-		cand[i] = C[i];
-	}
-	cand[size - 1] = new candidate();
-	cin >> *cand[size - 1];
-
-	delete[]cand;
-	C = cand;
-	candidate_no = size;
-}
+//void local_election::setcandidate() {
+//	int size;
+//	size = candidate_no + 1;
+//	C = new candidate * [size];
+//	candidate** cand = new candidate * [size];
+//	for (int i = 0;i < size;i++)
+//	{
+//		cand[i] = C[i];
+//	}
+//	cand[size - 1] = new candidate();
+//	cin >> *cand[size - 1];
+//
+//	delete[]cand;
+//	C = cand;
+//	candidate_no = size;
+//}
 void local_election::setn_Code()
 {
 	string n;
 	cout << "Enter national code: ";
 	cin >> n;
-	code->setcode(n);
+	pCode->setcode(n);
 }
 Code* local_election::getUniquecode()
 {
@@ -36,7 +36,7 @@ Code* local_election::getUniquecode()
 	Code* S;
 	for (int i = 0;i < candidate_no;i++)
 	{
-		s[i] = *C[i]->getcons();
+		s[i] = C[i]->getcons();
 	}
 	for (int i = 0;i < candidate_no;i++)
 	{
@@ -73,7 +73,7 @@ void local_election::select_mna()
 		int maxVotes = -1;
 		int maxIndex = -1;
 		for (int j = 0; j < candidate_no; j++) {
-			if (C[j]->getcons()->getcode() == uniqueCons[i].getcode()) {
+			if (C[j]->getcons().getcode() == uniqueCons[i].getcode()) {
 				if (C[j]->getnoOfvotes() > maxVotes) {
 					maxVotes = C[j]->getnoOfvotes();
 					maxIndex = j;
@@ -82,20 +82,10 @@ void local_election::select_mna()
 		}
 		index[i] = maxIndex;
 	}
-	code = new Code[len];
+	pCode = new Code[len];
 	for (int i = 0; i < len; i++) {
-		code[i] = *C[index[i]]->getcons();
+		pCode[i] = C[index[i]]->getcons();
 	}
 	delete[] uniqueCons;
 	delete[] index;
-}
-void local_election::assign_mna()
-{
-	for (int i = 0;i < mna_count;i++)
-	{
-		for (int j = 0;j < 3;j++)
-		{
-
-		}
-	}
 }

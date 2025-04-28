@@ -1,14 +1,2 @@
 ﻿  admin.cpp
-  candidate.cpp
-  constituency.cpp
-  election.cpp
-  general.cpp
-  local.cpp
-  national.cpp
-  online voting.cpp
-E:\2024-CS-726(final)\2024-CS-726\Oop project with files\Oop project with files\online voting.cpp(47,5): warning C4102: 'defaul': unreferenced label
-  user.cpp
-  voter.cpp
-  Generating Code...
-  LINK : E:\2024-CS-726(final)\2024-CS-726\Oop project with files\x64\Debug\Oop project with files.exe not found or not built by the last incremental link; performing full link
   Oop project with files.vcxproj -> E:\2024-CS-726(final)\2024-CS-726\Oop project with files\x64\Debug\Oop project with files.exe

@@ -23,6 +23,8 @@ public:
 	void setName(string n);
 	void setParty(string p);
 	void set_ID();
+	void setcode(string c);
+	void setNcode(string n);
 	void setArea(string a);
 	void setPosition(string p);
 	void setnoOfvotes(int n);
@@ -33,12 +35,13 @@ public:
 	string getPosition() const;
 	int getnoOfvotes() const;
 	string getBio() const;
-	Code* getcons();
+	Code getcons();
+	
 	void setcandidate(string n, string p, string a, string P, string b, int no);
 	friend istream& operator >>(istream& in, candidate& c);
 
 	friend ostream& operator<<(ostream& out, const candidate& c);
 	void addVote();
-
+	void inputCand(string c,string n);
 };
 #endif

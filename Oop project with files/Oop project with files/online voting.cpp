@@ -15,6 +15,20 @@ void elections();
 void admin_menu();
 int main()
 {
+    admin a;
+    a.createElection();
+    election E;
+    char ch='Y';
+    while (ch == 'Y' || ch == 'y')
+    {
+        E.addCandidate();
+        cout << "Enter 'Y' or 'y' to add candidate: ";
+        cin >> ch;
+    }
+    E.showCand();
+    a.addCandidateMPA();
+    //general_election E1;
+
     return 0;
 }
 void menu(admin& A)

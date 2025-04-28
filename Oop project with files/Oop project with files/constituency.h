@@ -10,13 +10,15 @@ private:
 	string c_code, n_code;
 public:
 	Code();
-	void setcode(string n);
+	void setcode(string c);
+	void setNcode(string n);
 	string getcode();
-	void operator=(Code c)
-	{
-		c.c_code = c_code;
-	}
+	string getNcode();
+	void operator=(Code c);
+
 	friend istream& operator>>(istream& in, Code c);
 	friend ostream& operator<<(ostream& out, Code c);
+	bool check_equal(Code* t);
+	bool operator==(Code t);
 };
 #endif

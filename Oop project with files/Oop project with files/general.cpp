@@ -9,22 +9,22 @@ general_election::general_election()
 	C = nullptr;
 	candidate_no = 0;
 }
-void general_election::setcandidate() {
-	int size;
-	size = candidate_no + 1;
-	C = new candidate * [size];
-	candidate** cand = new candidate * [size];
-	for (int i = 0;i < size;i++)
-	{
-		cand[i] = C[i];
-	}
-	cand[size - 1] = new candidate();
-	cin >> *cand[size - 1];
-
-	delete[]cand;
-	C = cand;
-	candidate_no = size;
-}
+//void general_election::setcandidate() {
+//	int size;
+//	size = candidate_no + 1;
+//	C = new candidate * [size];
+//	candidate** cand = new candidate * [size];
+//	for (int i = 0;i < size;i++)
+//	{
+//		cand[i] = C[i];
+//	}
+//	cand[size - 1] = new candidate();
+//	cin >> *cand[size - 1];
+//
+//	delete[]cand;
+//	C = cand;
+//	candidate_no = size;
+//}
 Code* general_election::getUniquecode()
 {
 	int k = 0;
@@ -32,7 +32,7 @@ Code* general_election::getUniquecode()
 	Code* S;
 	for (int i = 0;i < candidate_no;i++)
 	{
-		s[i] = *C[i]->getcons();
+		s[i] = C[i]->getcons();
 	}
 	for (int i = 0;i < candidate_no;i++)
 	{
@@ -68,7 +68,7 @@ void general_election::select_mpa()
 		int maxVotes = -1;
 		int maxIndex = -1;
 		for (int j = 0; j < candidate_no; j++) {
-			if (C[j]->getcons()->getcode() == uniqueCons[i].getcode()) {
+			if (C[j]->getcons().getcode() == uniqueCons[i].getcode()) {
 				if (C[j]->getnoOfvotes() > maxVotes) {
 					maxVotes = C[j]->getnoOfvotes();
 					maxIndex = j;
@@ -77,9 +77,9 @@ void general_election::select_mpa()
 		}
 		index[i] = maxIndex;
 	}
-	code = new Code[len];
+	mCode = new Code[len];
 	for (int i = 0; i < len; i++) {
-		code[i] = *C[index[i]]->getcons();
+		mCode[i] = C[index[i]]->getcons();
 	}
 	delete[] uniqueCons;
 	delete[] index;
