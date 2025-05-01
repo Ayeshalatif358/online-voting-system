@@ -30,26 +30,30 @@ admin::~admin() {
 
 int admin::getcnic() { return cnic; }
 bool admin::login(){
-    user::inputUserData(); admin d;
+    admin d;
+    d.inputUserData(); 
     ifstream read;
     read.open("admin.txt");
-    read>>d.name;
-    read>>d.cnic;
-    read>>d.password;
+    read>>name;
+    read>>cnic;
+    read>>password;
     if(name==d.name&&cnic==d.cnic&&password==d.password)
     return 1;
 else
 return 0;
-
 }
 istream& operator>>(istream& in, admin& a) {
+    if(!a.status){
     a.inputUserData();
     ofstream write;
     write.open("admin.txt");
     write<<a.name<<endl;
     write<<a.cnic<<endl;
     write<<a.password<<endl;
-
+a.status=1;
+}else{
+    cout<<"Admin already signed up\n";
+}
     return in;
 }
 

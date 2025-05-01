@@ -10,7 +10,7 @@
 #include "user.h"
 using namespace std;
 class admin : public user {
-    election** e;
+    election** e; bool status;
     static int mna_count;
     int election_no;
 public:
