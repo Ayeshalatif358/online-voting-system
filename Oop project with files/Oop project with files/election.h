@@ -50,7 +50,7 @@ protected:
 	bool isActive;
 	date startDate, endDate;
 public:
-
+virtual ~election();
 	election(int c, int v, string t, string a, bool active);
 	election();
 	void set_title(string t);
@@ -61,7 +61,7 @@ public:
 	friend istream& operator>>(istream& in, election& e);
 	friend ostream& operator<<(ostream& out, const election& e);
 	//Getters
-	int get_id();
+	virtual int get_id();
 	int get_candidate_no();
 	string get_title();
 	int get_voter_no();

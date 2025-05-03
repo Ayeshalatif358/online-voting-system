@@ -1,4 +1,5 @@
 #include<iostream>
+#include<fstream>
 #include<string>
 #include "user.h"
 #include "voter.h"
@@ -10,13 +11,13 @@ using namespace std;
 int admin::mna_count = 0;
 
 admin::admin() {
-    election_no = 3;
-    e = new election * [election_no];  // Allocating array of pointers to elections
+    // election_no = 3;
+    // e = new election * [election_no];  // Allocating array of pointers to elections
 
-    // Initialize each election pointer
-    for (int i = 0; i < election_no; ++i) {
-        e[i] = new election();  // Allocate new election objects
-    }
+    // // Initialize each election pointer
+    // for (int i = 0; i < election_no; ++i) {
+    //     e[i] = new election();  // Allocate new election objects
+    // }
 }
 
 admin::~admin() {
@@ -28,18 +29,31 @@ admin::~admin() {
 }
 
 int admin::getcnic() { return cnic; }
-
+bool admin::login(){
+    admin d;
+    d.inputUserData(); 
+    ifstream read;
+    read.open("admin.txt");
+    read>>name;
+    read>>cnic;
+    read>>password;
+    if(name==d.name&&cnic==d.cnic&&password==d.password)
+    return 1;
+else
+return 0;
+}
 istream& operator>>(istream& in, admin& a) {
+    if(!a.status){
     a.inputUserData();
-
-    cout << "Enter number of elections managed: ";
-    in >> a.election_no;
-    a.e = new election * [a.election_no];  // Allocate new array for elections
-
-    for (int i = 0; i < a.election_no; ++i) {
-        a.e[i] = new election();  // Initialize each election pointer
-    }
-
+    ofstream write;
+    write.open("admin.txt");
+    write<<a.name<<endl;
+    write<<a.cnic<<endl;
+    write<<a.password<<endl;
+a.status=1;
+}else{
+    cout<<"Admin already signed up\n";
+}
     return in;
 }
 
@@ -51,7 +65,36 @@ ostream& operator<<(ostream& out, admin& a) {
 }
 
 void admin::createElection() {
-    cin >> *e[0];  // Read election data for e[0]
+    election_no+=1;
+    election **temp;
+    temp=new election*[election_no];
+    for (int i = 0; i < election_no - 1; ++i) {
+        temp[i] = e[i];  // shallow copy (just pointer assignment)
+    }
+
+    // Step 3: Ask for election type
+    int choice;
+    cout << "Enter type of election you want to create.\n1. General Election\n2. Local Election\n3. National Election\n";
+    cin >> choice;
+
+    // Step 4: Create appropriate derived object
+    switch (choice) {
+        case 1:
+            temp[election_no - 1] = new general_election();
+            break;
+        case 2:
+            temp[election_no - 1] = new local_election();
+            break;
+        case 3:
+            temp[election_no - 1] = new national_election();
+            break;
+        default:
+            cout << "Invalid choice. Creating general election by default.\n";
+            temp[election_no - 1] = new general_election();
+            break;
+    }
+    delete[]e;
+    e=temp;
 }
 
 void admin::CMelection() {
