@@ -1,39 +1,57 @@
-#include<iostream>
+﻿#include<iostream>
 #include<string>
 #include"election.h"
 #include"candidate.h"
 #include"voter.h"
+#include<fstream>
 using namespace std;
+
 int election::id = 0;
-election::election(int c = 0, int v = 0, string t = " ", string a = " ", bool active = 0, string S_D = "0", string E_D = "0")
+
+election::election(int c, int v, string t, string a, bool active)
 {
-    id = ++id;
+    if (id == 0) {  // Only increment id the first time
+        id = 1;
+    }
+    else {
+        id = ++id;
+    }
+
     candidate_no = c;
     title = t;
     area = a;
     voter_no = v;
     isActive = active;
-    startDate = S_D;
-    endDate = E_D;
+    C = nullptr;
+    V = nullptr;
+    winCode = nullptr;
+    
+    candidate_count = 0;
 }
-election::election() {
 
-    id = ++id;
+election::election()
+{
+    if (id == 0) {  // Only increment id the first time
+        id = 1;
+    }
+    else {
+        id = ++id;
+    }
+
     candidate_count = 0;
     candidate_no = 0;
     title = "";
     voter_no = 0;
     area = "";
     isActive = 0;
-    startDate = "";
-    endDate = "";
 }
 
 void election::set_title(string t) { title = t; }
 void election::set_area(string a) { area = a; }
-void election::set_startDate(string S_D) { startDate = S_D; }
-void election::set_endDate(string E_D) { endDate = E_D; }
-//Getters
+void election::set_startDate() { cin >> startDate; }
+void election::set_endDate() { cin >> endDate; }
+
+// Getters
 int election::get_id() { return id; }
 int election::get_candidate_no() { return candidate_no; }
 int election::get_voter_no() { return voter_no; }
@@ -41,47 +59,34 @@ string election::get_title() { return title; }
 candidate** election::get_candidate() { return C; }
 voter** election::get_voter() { return V; }
 string election::get_area() { return area; }
-string election::get_startDate() { return startDate; }
-string election::get_endDate() { return endDate; }
-bool election::isactive() { return isActive; }
+date election::get_startDate() { return startDate; }
+date election::get_endDate() { return endDate; }
+
+Code* election::selectedCand() { return winCode; }
 
 istream& operator>>(istream& in, election& e) {
     cout << "Enter Election Title: ";
-    getline(in >> ws, e.title);
+    getline(in, e.title);
 
     cout << "Enter Area: ";
     getline(in, e.area);
 
     cout << "Enter Start Date (DD-MM-YYYY): ";
-    getline(in, e.startDate);
+    in >> e.startDate;
 
     cout << "Enter End Date (DD-MM-YYYY): ";
-    getline(in, e.endDate);
+    in >> e.endDate;
+
+    in.ignore(); // ✅ important: ignore leftover newline
 
     char status;
     cout << "Is the election active? (y/n): ";
     in >> status;
     e.isActive = (status == 'y' || status == 'Y');
 
-    cout << "Enter number of candidates: ";
-    in >> e.candidate_no;
-    e.C = new candidate * [e.candidate_no];
-    for (int i = 0; i < e.candidate_no; ++i) {
-        e.C[i] = new candidate;
-    }
-    for (int i = 0; i < e.candidate_no; ++i) {
-        e.C[i] = nullptr; // placeholder: actual object should be passed by admin
-    }
-
-    cout << "Enter number of voters to link: ";
-    in >> e.voter_no;
-    e.V = new voter * [e.voter_no];
-    for (int i = 0; i < e.voter_no; ++i) {
-        e.V[i] = nullptr; // same, to be assigned externally
-    }
-
     return in;
 }
+
 ostream& operator<<(ostream& out, const election& e) {
     out << "Election ID: " << election::id << endl;
     out << "Title: " << e.title << endl;
@@ -105,33 +110,107 @@ ostream& operator<<(ostream& out, const election& e) {
 
     return out;
 }
-void election::endElection() {
-    isActive = false;
-    cout << "Election ended.\n";
+
+void election::addCandidate(string filename) {
+    ifstream read;
+    read.open(filename);
+    string line;
+    candidate_no = 1;
+    line = " ";
+    string a = "###";
+    while (!read.eof()) {
+        getline(read, line);
+        if (line == a)
+        {
+            candidate_no++;
+        }
+    }
+    int k = 0;
+    while (!read.eof())
+    {
+        int j = k++;
+        candidate** c;
+        int Cnic;
+        c = new candidate * [candidate_no];
+        while (line != a) {
+            getline(read, line);
+            c[j]->setcode(line);
+            getline(read, line);
+            c[j]->setNcode(line);
+            getline(read, line);
+            c[j]->setName(line);
+            getline(read, line);
+            c[j]->setParty(line);
+            getline(read, line);
+            c[j]->setArea(line);
+            getline(read, line);
+            c[j]->setPosition(line);
+            getline(read, line);
+            c[j]->setBio(line);
+        }
+
+    }
 }
-//void election::addCandidate()
-//{
-//    for (int i = 0; i < candidate_no; i++)
-//    {
-//        C[i] = new candidate();
-//        cout << "Enter details for candidate " << i + 1 << ": ";
-//        cin >> *C[i];
-//    }
-//}
+void election::winnerCand(string filename)
+{
+    string* arr;
+    ifstream read;
+    read.open(filename);
+    if(!read.is_open()){
+        cout<<"Error opening file!!\n";
+    }
+    int i=0;
+    while(!read.eof()){
+        i++;
+    }
+    arr=new string[i];
+    for(int j=0;j<i;j++){
+        getline(read,arr[i]);
+    }
+    for(int k=0;k<candidate_no;k++){
+        if(arr[i]==C[i]->getcons().getcode()){
+            cout<<*C[i];
+        }
+    }
+}
+int election::checkCity(string c, int k)
+{
+    for (int i = 0;i < candidate_no;i++) {
+        if (C[i]->getArea() == C[k]->getArea()) {
+            if (C[i]->getcons().getcode() == c) {
+                return 1;
+            }
+            else return -1;
+        }
+        else return 2;
+    }
+}
 void election::vote(int index) {
     if (index >= 1 && index <= candidate_count) {
         C[index - 1]->addVote();
     }
     else {
         cout << "Invalid choice.\n";
-        }
+    }
+}
+void election::regCandidate(string filename){
+    int size;
+	size = candidate_no + 1;
+	C = new candidate * [size];
+	candidate** cand = new candidate * [size];
+    if(size>1){
+        for (int i = 0;i < size;i++)
+	{
+		cand[i] = C[i];
+	}
+    }
+	cand[size - 1] = new candidate();
+	cin >> *cand[size - 1];
+    cand[size - 1]->inputFile(filename);
+	delete[]cand;
+	C = cand;
+	candidate_no = size;
 }
 
-////candidate* election :: getMNA(){}
-//void election:: create_election()
-//{
-//}
-void election::startElection() {
-    isActive = true;
-    cout << "Election started.\n";
-}
+
+

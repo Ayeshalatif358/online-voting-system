@@ -1,53 +1,17 @@
 #include<iostream>
 #include<string>
-#include<fstream>
-#include"general.h"
+#include"local.h"
 #include"candidate.h"
+#include<fstream>
+#include"constituency.h"
+#include"general.h"
 #include"voter.h"
 using namespace std;
-general_election::general_election()
+int local_election::getmnaCount()
 {
-	C = nullptr;
-	candidate_no = 0;
+    return mna_count;
 }
-//void general_election::setcandidate() {
-//	int size;
-//	size = candidate_no + 1;
-//	C = new candidate * [size];
-//	candidate** cand = new candidate * [size];
-//	for (int i = 0;i < size;i++)
-//	{
-//		cand[i] = C[i];
-//	}
-//	cand[size - 1] = new candidate();
-//	cin >> *cand[size - 1];
-//
-//	delete[]cand;
-//	C = cand;
-//	candidate_no = size;
-//}
-int general_election::check(string n)
-{
-    int k = 0;
-    string temp;
-    for (int j = 0; j < candidate_no; j++)
-    {
-        if (C[j]->getPosition() == "MPA" || C[j]->getPosition() == "mpa")
-        {
-            if (C[j]->getcons().getNcode() == n) {
-                k++;
-                if (k > 2) {
-                    return -1;
-                }
-                else if (k < 2) {
-                    return -2;
-                }
-            }
-        }
-    }
-    return -3;
-}
-Code* general_election::getUniquecode()
+Code* local_election::getUniquecode()
 {
 	int k = 0;
 	Code* s = new Code[candidate_no];
@@ -78,14 +42,14 @@ Code* general_election::getUniquecode()
 	S[k].setcode("#");
 	return S;
 }
-
-void general_election::select_mpa()
+void local_election::select_mna()
 {
 	Code* uniqueCons = getUniquecode();
 	int len = 0;
 	while (uniqueCons[len].getcode() != "#") {
 		len++;
 	}
+	mna_count = len;
 	int* index = new int[len];
 	for (int i = 0; i < len; i++) {
 		int maxVotes = -1;
@@ -106,8 +70,8 @@ void general_election::select_mpa()
 	}
 	delete[] uniqueCons;
 	delete[] index;
-	ofstream write;
-    write.open("Winner MPA",ios::app);
+    ofstream write;
+    write.open("Winner MNA",ios::app);
     if(!write.is_open()){
         cout<<"Error opening file!!\n";
     }
@@ -116,10 +80,49 @@ void general_election::select_mpa()
 	}
 }
 
+int local_election::checkMNAexist(string n)
+{
+    for (int i = 0;i < candidate_no;i++) {
+        for (int j = i;j < candidate_no;j++) {
+            if (C[i]->getcons().getNcode() == n) {
+                return 1;
+            }
+        }
+    }
+    return -1;
+}
 
-void general_election::assignCodeToMPA() {
+int local_election::MNcheck(int i, string n)
+{
+    int k = 0;
+    for (int j = 0; j < i; j++)
+    {
+        if (C[j]->getcons().getNcode() == n) {
+            k++;
+            if (k > 1) {
+                return -1;
+            }
+        }
+        return -3;
+    }
+}
+int local_election::MNcheckCons(int i, string c)
+{
+    int k = 0;
+    for (int j = 0; j < i; j++)
+    {
+        if (C[j]->getcons().getcode() == c) {
+           k++;
+           if (k > 1) {
+              return -2;
+           }
+           }
+        }
+        return -3;
+}
+void local_election::assignCodeToMNA() {
     if (C == nullptr) {
-        addCandidate("MPA DATA");
+        addCandidate("MNA DATA");
     }
     string line, pos;
     ofstream write("Candidate", ios::app);
@@ -129,31 +132,31 @@ void general_election::assignCodeToMPA() {
     ifstream read("Candidate");
 
     for (int i = 0; i < candidate_no; i++) {
-            if (C[i]->getcons().getcode() == "") {
+         if (C[i]->getcons().getcode() == "") {
                 string c, n;
-                cout << "For MPA having CNIC: " << C[i]->getcnic() << endl;
+                cout << "For MNA having CNIC: " << C[i]->getcnic() << endl;
 
                 cout << "Enter constituency code: ";
                 cin >> c;
-                while (checkCity(c, i) == -1) {
-                    cout << "Candidates having same area should have same constituency code!!\n";
-                    cout << "Enter constituency code again: ";
-                    cin >> c;
+
+                cout << "Enter national code: ";
+                cin >> n;
+
+                while (MNcheckCons(i,c) == -2) {
+                    cout << "Constituency Code of MNA must be unique!!\nEnter Constituency Code again: ";
+                    cin >> n;
+                }
+
+                while (MNcheck(i, n) == -1) {
+                    cout << "National Code of MNA must be unique!!\nEnter National Code again: ";
+                    cin >> n;
                 }
                 
                 C[i]->setcode(c);
+                C[i]->setNcode(n);
             }
-    }
-}
-string general_election::nationalCode(){
-	string n;
-		cout << "Enter national code: ";
-		cin >> n;
-		return n;
-}
-void general_election::assignMpa(string n,int i) {
-	string n;
-	C[i]->setNcode(n);
+            else continue;
+        }
 }
 
 void election::showCand()
@@ -166,6 +169,3 @@ void election::showCand()
         }
     }
 }
-
-
-
