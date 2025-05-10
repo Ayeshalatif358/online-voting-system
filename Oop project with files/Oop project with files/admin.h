@@ -5,7 +5,6 @@
 #include<string>
 #include "election.h"
 #include "candidate.h"
-
 #include "voter.h"
 #include "user.h"
 using namespace std;
@@ -18,14 +17,11 @@ public:
     ~admin();
     friend ostream& operator<<(ostream& out, admin& a);
     friend istream& operator>>(istream& in, admin& a);
-    int getcnic() override;
-    void addCandidateMNA();
-    void addCandidateMPA();
-    void assignMpa();
+    string getcnic() override;
     bool login();
-    int check(candidate** ca,string m);
+    int getelectionNo();
+    election** getelection();
     void createElection();
-    void CMelection();
-    void PMelection();
+    void loadElectionsFromFile();
 };
 #endif

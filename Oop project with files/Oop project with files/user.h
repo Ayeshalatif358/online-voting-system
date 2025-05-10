@@ -8,15 +8,15 @@ using namespace std;
 class user
 {
 protected:
-	int cnic;
+	string cnic;
 	string name;
 	string password;
 public:
-	user(int c = 0, string n = "", string p = "");
-	virtual int getcnic() = 0;
+	user(string c = 0, string n = "", string p = "");
+	virtual string getcnic() = 0;
 	string getname()const;
 	string getpass()const;
-	void setcnic(int c);
+	void setcnic(string c);
 	void setname(string n);
 	void setpass(string n);
 	void inputUserData();
