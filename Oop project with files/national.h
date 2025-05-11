@@ -1,35 +1,27 @@
 #pragma once
-#ifndef national_H
-#define national_H
+#ifndef National_H
+#define National_H
 #include<iostream>
 #include<string>
-#include"election.h"
+#include "election.h"
+#include<fstream>
 using namespace std;
 class national_election :public election {
 protected:
-    string country;
-    int totalseats;
-    string* partynames;
     int* partyseats;
-    string* partyleaders;
-    int partycount;
     string pm;
 public:
     national_election();
-    national_election(const string& c, int totalSeats, int partyCount);
-    void setCountry(string& c);
-    void setTotalSeats(int seats);
-    string getCountry() const;
-    int getTotalSeats() const;
-
-    int getPartyCount() const;
-    string getPartyName(int index);
     int getPartySeats(int index);
-
-    string getPartyLeader(int index);
-
+    void select_cand()override;
     string getPrimeMinister();
-    void cast_vote(int ID);
+    void addVoter();
+    bool cast_Voteforpm()override;
+    void selectVoter();
+    void regCandidate(string filename, string id, string pos)override;
+    void readparty();
+    bool loginMNA(string c)override;
     ~national_election();
 };
+
 #endif

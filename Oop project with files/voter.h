@@ -1,31 +1,39 @@
 #pragma once
-#pragma once
-#ifndef voting_H
-#define voting_H
+#ifndef VOTER_H
+#define VOTER_H
 #include<iostream>
 #include<string>
-#include"user.h"
-#include"candidate.h"
+#include "user.h"
+#include"code.h"
 using namespace std;
 class voter :public user {
-protected:
-	static int id;
-	bool status;
-	bool hasvoted=0;
-	int age;
+private:
+    int id;
+    bool Phasvoted = 0;
+    bool Nhasvoted = 0;
+    int age;
+    Code cons;
 public:
-	voter(bool s = 0, int a = 0);
+    Code getVoterCode()const;
+    bool signupToPendingFile();
+    voter(int a = 0);
+    string getcnic();
+    void setage(int a);
+    void setPhasvoted(bool hv);
+    void setNhasvoted(bool hv);
+    void setid(int a);
+    void setVoterCode(Code c);
+    int getage();
+    int getid();
+    /*static void loadLastVoterId();*/
+   /* voter login();*/
+    bool getNhasvoted();
+    bool getPhasvoted();
+    friend istream& operator>>(istream& in, voter& v);
+    friend ostream& operator<<(ostream& out, voter& v);
+    void setcode(string c);
+    void setNcode(string n);
+    //void loadLastVoterId();
 
-	int getcnic() override;
-	void setstatus(bool s);
-	void setage(int a);
-	void sethasvoted(bool s);
-	bool getstatus();
-	int getage();
-	bool gethasvoted();
-	friend istream& operator>>(istream& in, voter& v);
-	friend ostream& operator<<(ostream& out, const voter& v);
-
-	void cast_vote(candidate* c[], int s);
 };
 #endif

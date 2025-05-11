@@ -1,8 +1,8 @@
-#include"user.h"
 #include<iostream>
 #include<string>
+#include"user.h"
 using namespace std;
-user::user(int c, string n, string p) :cnic(c), name(n), password(p) {}
+user::user(string c, string n, string p) :cnic(c), name(n), password(p) {}
 void user::inputUserData() {
     cout << "Enter CNIC: ";
     cin >> cnic;
@@ -16,9 +16,9 @@ void user::outputUserData() const {
     cout << "Name: " << name << endl;
     cout << "Password: " << password << endl;
 }
-int user::getcnic() { return cnic; };
+string user::getcnic() { return cnic; };
 string user::getname()const { return name; }
 string user::getpass()const { return password; }
-void user::setcnic(int c) { cnic = c; }
+void user::setcnic(string c) { cnic = c; }
 void user::setname(string n) { name = n; }
 void user::setpass(string n) { password = n; }

@@ -1,169 +1,281 @@
-#include<iostream>
-#include<fstream>
+﻿#include<iostream>
 #include<string>
-#include "user.h"
-#include "voter.h"
-#include "admin.h"
-#include "election.h"
-#include "candidate.h"
+#include"admin.h"
+#include"general.h"
+#include"national.h"
+#include"local.h"
+#include<fstream>
+#include<windows.h>
 using namespace std;
 
 int admin::mna_count = 0;
 
 admin::admin() {
-    // election_no = 3;
-    // e = new election * [election_no];  // Allocating array of pointers to elections
+    e = nullptr;
+    election_no = 0;
+     election_no = 3;
+     e = new election * [election_no]; 
 
-    // // Initialize each election pointer
-    // for (int i = 0; i < election_no; ++i) {
-    //     e[i] = new election();  // Allocate new election objects
-    // }
+
+     for (int i = 0; i < election_no; ++i) {
+         e[i] = new election();  
+     }
 }
 
 admin::~admin() {
-    // Clean up the memory for each election
-    for (int i = 0; i < election_no; ++i) {
-        delete e[i];
+    if (e != nullptr) {
+        for (int i = 0; i < election_no; ++i) {
+            delete e[i];
+        }
+        delete[] e;
     }
-    delete[] e;  // Free the array of election pointers
 }
 
-int admin::getcnic() { return cnic; }
-bool admin::login(){
+string admin::getcnic() { return cnic; }
+bool admin::login() {
     admin d;
-    d.inputUserData(); 
+    d.inputUserData();
     ifstream read;
     read.open("admin.txt");
-    read>>name;
-    read>>cnic;
-    read>>password;
-    if(name==d.name&&cnic==d.cnic&&password==d.password)
-    return 1;
-else
-return 0;
+    read >> name;
+    read >> cnic;
+    read >> password;
+    if (name == d.name && cnic == d.cnic && password == d.password)
+        return 1;
+    else
+        return 0;
 }
 istream& operator>>(istream& in, admin& a) {
-    if(!a.status){
+    ifstream check("admin.txt");
+
+    // Check if admin.txt has any content
+    if (check.peek() != ifstream::traits_type::eof()) {
+        cout << "Admin already signed up.\n";
+        return in;
+    }
+    check.close();
+
+    // If file is empty, allow signup
     a.inputUserData();
-    ofstream write;
-    write.open("admin.txt");
-    write<<a.name<<endl;
-    write<<a.cnic<<endl;
-    write<<a.password<<endl;
-a.status=1;
-}else{
-    cout<<"Admin already signed up\n";
-}
+
+    ofstream write("admin.txt");
+    if (!write) {
+        cerr << "Failed to open admin.txt for writing.\n";
+        return in;
+    }
+
+    write << a.name << endl;
+    write << a.cnic << endl;
+    write << a.password << endl;
+
+    cout << "Admin registered successfully.\n";
+
     return in;
 }
 
 ostream& operator<<(ostream& out, admin& a) {
-    a.outputUserData();
+    ifstream read("admin.txt");
+    if (!read) {
+        out << "No admin data found.\n";
+        return out;
+    }
 
-    cout << "Admin manages " << a.election_no << " election(s)." << endl;
+    getline(read, a.name);
+    getline(read, a.cnic);
+    getline(read, a.password);
+
+    a.outputUserData();
+    out << "Admin manages " << a.election_no << " election(s)." << endl;
+
     return out;
 }
 
 void admin::createElection() {
-    cin >> *e[0];  // Read election data for e[0]
-}
-
-void admin::CMelection() {
-    cin >> *e[1];  // Read election data for e[1]
-}
-
-void admin::PMelection() {
-    cin >> *e[2];  // Read election data for e[2]
-}
-
-void admin::addCandidateMNA() {
-    candidate** ca = e[0]->get_candidate();
-    int a = e[0]->get_candidate_no();
-    for (int i = 0; i < a; i++) {
-        if (ca[i]->getPosition() == "MNA" || ca[i]->getPosition() == "mna") {
-            string c, n;
-            cout << "Enter constituency code: ";
-            cin >> c;
-            cout << "Enter national code: ";
-            cin >> n;
-            while (e[0]->MNcheck(i, n) == -1) {
-                cout << "National Code of MNA must be unique!!\nEnter National Code again: ";
-                cin >> n;
-            }
-            ca[i]->inputCand(c, n);
-            mna_count++;
-        }
+    election_no += 1;
+    election** temp;
+    temp = new election * [election_no];
+    for (int i = 0; i < election_no - 1; ++i) {
+        temp[i] = e[i];  // shallow copy (just pointer assignment)
     }
-}
+    system("cls");
+    Sleep(500);
+    // Step 3: Ask for election type
+    int choice;
+    cout << "Enter type of election you want to create.\n1. General Election\n2. Local Election\n3. National Election\n";
+    cin >> choice;
+    system("cls");
+    Sleep(500);
+    ofstream out;
+    ifstream read; int id;
+    read.open("Election ID.txt");
+    if (!read.is_open()) {
+        cout << "Error opening file\n"; 
+    }
+    read >>id;
+    read.close();
 
-void admin::addCandidateMPA() {
-    cout << "Inside addCandidateMPA function." << endl;
+    out.open("Election.txt", ios::app);
+    if (!out.is_open()) {
+        system("cls");
+        Sleep(500);
+        cout << "Cannot open Election.txt to write\n";
 
-    if (e[0] == nullptr) {
-        cout << "e[0] is null, cannot proceed with adding MPA candidates." << endl;
-        return;  // Exit if the election object is invalid
     }
 
-    string c;
-    candidate** ca = e[0]->get_candidate();
-    int a = e[0]->get_candidate_no();
-    cout << "Number of candidates: " << a << endl;
+    // Step 4: Create appropriate derived object
+    else {
+        switch (choice) {
+        case 1: {
 
-    for (int i = 0; i < a+1; i++) {
-        if (ca[i] != nullptr) {
-            cout << "Candidate " << i + 1 << " Position: " << ca[i]->getPosition() << endl;
-            if (ca[i]->getPosition() == "MPA" || ca[i]->getPosition() == "mpa") {
-                cout << "Position matches MPA." << endl;
-                cout << *ca[i] << endl;
-                cout << "Enter constituency code of MPA: ";
-                cin >> c;
-                ca[i]->setcode(c);
-                cout << "Updated Candidate Info: " << endl;
-                cout << *ca[i] << endl;
-            }
+            temp[election_no - 1] = new general_election();
+            temp[election_no - 1]->set_id(++id);
+            system("cls");
+            Sleep(500);
+            cin >> *temp[election_no - 1];
+            out << temp[election_no - 1]->get_id() << endl;
+            out << "General" << endl;
+            out << temp[election_no - 1]->get_area() << endl;
+            out << temp[election_no - 1]->get_startDate().getDay() << endl << temp[election_no - 1]->get_startDate().getMonth() << endl << temp[election_no - 1]->get_startDate().getYear() << endl;
+
+            out << temp[election_no - 1]->get_endDate().getDay() << endl << temp[election_no - 1]->get_startDate().getMonth() << endl << temp[election_no - 1]->get_startDate().getYear() << endl;
+
+            out.close();
+            system("cls");
+            Sleep(500);
+            cout << "General Election with ID " << temp[election_no - 1]->get_id() << " Created Successfully\n";
+            out.open("Election ID.txt");
+            out << temp[election_no - 1]->get_id() << endl;
+            out.close();
+            break;
         }
-        else {
-            cout << "Candidate " << i + 1 << " is null." << endl;
+        case 2: {
+            temp[election_no - 1] = new local_election();
+            temp[election_no - 1]->set_id(++id);
+            cin >> *temp[election_no - 1];
+            system("cls");
+            Sleep(500);
+            out << temp[election_no - 1]->get_id() << endl;
+            out << "Local" << endl;
+            out << temp[election_no - 1]->get_area() << endl;
+
+            out << temp[election_no - 1]->get_startDate().getDay() << endl << temp[election_no - 1]->get_startDate().getMonth() << endl << temp[election_no - 1]->get_startDate().getYear() << endl;
+
+            out << temp[election_no - 1]->get_endDate().getDay() << endl << temp[election_no - 1]->get_startDate().getMonth() << endl << temp[election_no - 1]->get_startDate().getYear() << endl;
+            out.close();
+
+            system("cls");
+            Sleep(500);
+            cout << "Local Election with ID " << temp[election_no - 1]->get_id() << " Created Successfully\n";
+
+            break;
+        }
+        case 3: {
+            temp[election_no - 1] = new national_election();
+            temp[election_no - 1]->set_id(++id);
+            cin >> *temp[election_no - 1];
+            system("cls");
+            Sleep(500);
+            out << temp[election_no - 1]->get_id() << endl;
+            out << "National" << endl;
+            out << temp[election_no - 1]->get_area() << endl;
+
+            out << temp[election_no - 1]->get_startDate().getDay() << endl << temp[election_no - 1]->get_startDate().getMonth() << endl << temp[election_no - 1]->get_startDate().getYear() << endl;
+
+            out << temp[election_no - 1]->get_endDate().getDay() << endl << temp[election_no - 1]->get_startDate().getMonth() << endl << temp[election_no - 1]->get_startDate().getYear() << endl;
+            out << endl;
+            out.close();
+
+            system("cls");
+            Sleep(500);
+            cout << "National Election with ID " << temp[election_no - 1]->get_id() << " Created Successfully\n";
+
+            break;
+        }
+        default: {
+            system("cls");
+            Sleep(500);;
+            cout << "Invalid choice. Election creation cancelled.\n";
+            election_no--;
+            delete[] temp;
+            return;
+            break;
+        }
         }
     }
+    delete[]e;
+    e = temp;
+
 }
+void admin::loadElectionsFromFile() {
+    ifstream read("Election.txt");
+    if (!read) {
+        cout << "Unable to open file: Election.txt " << endl;
+        return;
+    }
 
+    // Count number of non-empty lines
+    int line_count = 0;
+    string line;
+    while (getline(read, line)) {
+        if (!line.empty()) line_count++;
+    }
 
+    int lines_per_election = 9;
+    int total_elections = line_count / lines_per_election;
 
+    read.clear();
+    read.seekg(0, ios::beg);
 
+    e = new election * [total_elections];
+    election_no = total_elections;
 
-int admin::check(candidate** ca, string m) {
-    int a = e[0]->get_candidate_no();
-    for (int i = 0; i < a; i++) {
-        if (ca[i]->getcons().getcode() == m) {
-            return i;
+    for (int i = 0; i < total_elections; i++) {
+        string title, area;
+        int id;
+        date sd, ed;
+        int sday, smonth, syear;
+        int eday, emonth, eyear;
+
+        read >> id;
+        read.ignore(); // clear leftover newline
+
+        getline(read, title);
+        getline(read, area);
+
+        read >> sday >> smonth >> syear;
+        read >> eday >> emonth >> eyear;
+
+        // clear newline before reading strings
+
+        // Create and assign the correct election object based on title
+        election* ee = nullptr;
+        if (title == "General") {
+            ee = new general_election();
+        }
+        else if (title == "Local") {
+            ee = new local_election();
+        }
+        else if (title == "National") {
+            ee = new national_election();
+        }
+
+        // Set properties for the election object
+        if (ee) {
+            ee->set_id(id);
+            ee->set_title(title);
+            ee->set_area(area);
+
+            sd.setDate(sday, smonth, syear);
+            ed.setDate(eday, emonth, eyear);
+            ee->set_startDate(sd);
+            ee->set_endDate(ed);
+
+            e[i] = ee; // Assign the election to the array
         }
     }
-    return -1;
+    read.close();
 }
-
-void admin::assignMpa() {
-    string c;
-    candidate** ca = e[0]->get_candidate();
-    Code* mcode = e[0]->selectedMna();
-    e[0]->showMPA();
-    int k = 0;
-    int z = e[0]->getmnaCount();
-    for (int i = 0; i < z; i++) {
-        cout << "Enter constituency code for MNA having code: " << mcode[i] << endl;
-        for (int j = 0; j < 2; j++) {
-            cout << "For MPA" << j + 1 << ": ";
-            cin >> c;
-            k = check(ca, c);
-            while (k == -1) {
-                cout << "No such MPA exist!!\n";
-                cout << "Enter constituency code for MPA again: ";
-                cin >> c;
-                k = check(ca, c);
-            }
-            if (k != -1) {
-                ca[k]->setNcode(mcode[i].getNcode());
-            }
-        }
-    }
+int admin::getelectionNo() {
+    return election_no;
 }
+election** admin::getelection() { return e; }

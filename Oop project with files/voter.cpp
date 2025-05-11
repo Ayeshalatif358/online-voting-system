@@ -1,68 +1,132 @@
 #include<iostream>
 #include<string>
-#include"user.h"
 #include"voter.h"
-#include"candidate.h"
+#include<fstream>
+#include<windows.h>
 using namespace std;
-int voter::id = 0;
-voter::voter(bool s, int a)
+voter::voter(int a)
 {
-    id = ++id;
-    status = s;
+    
+    id = 0;
     age = a;
-
+    Phasvoted = 0;
+    Nhasvoted = 0;
 }
 
-int voter::getcnic() { return cnic; }
+//void voter::loadLastVoterId() {
+//    ifstream in("voter_id.txt");
+//    if (in) {
+//        in >> id;
+//    }
+//    in.close();
+//}
+//void voter::loadLastVoterId() {
+//    ofstream out("voter_id.txt");
+//    out << id;
+//    out.close();
+//}
+void voter::setcode(string n) {
+    cons.setcode(n);
+}
 
-void voter::setstatus(bool s) { status = s; }
+void voter::setNcode(string n) {
+    cons.setNcode(n);
+}
+string voter::getcnic() { return cnic; }
 void voter::setage(int a) { age = a; }
-void voter::sethasvoted(bool s) { hasvoted = s; }
-bool voter::getstatus() { return status; }
+void voter::setid(int a) { id = a; }
+void voter::setNhasvoted(bool hv) { Phasvoted = hv; }
+void voter::setPhasvoted(bool hv) { Nhasvoted = hv; }
 int voter::getage() { return age; }
-bool voter::gethasvoted() { return hasvoted; }
+int voter::getid() { return id; }
+bool voter::getPhasvoted() { return Phasvoted; }
+bool voter::getNhasvoted() { return Nhasvoted; }
 istream& operator>>(istream& in, voter& v) {
+    v.inputUserData();
     cout << "Enter age: ";
     in >> v.age;
-
-    char s;
-    cout << "Is the voter active? (y/n): ";
-    in >> s;
-    v.status = (s == 'y' || s == 'Y');
-
-    v.hasvoted = false; // Set default
-
+    v.Nhasvoted = false;
+    v.Phasvoted = false; // Set default
+    v.cons.setcode("null");
+    v.cons.setNcode("null");
     return in;
 }
-ostream& operator<<(ostream& out, const voter& v) {
-    out << "Voter ID: " << v.id << endl;
-    out << "Age: " << v.age << endl;
-    out << "Status: " << (v.status ? "Active" : "Inactive") << endl;
-    out << "Has Voted: " << (v.hasvoted ? "Yes" : "No") << endl;
-    return out;
-}
-void voter::cast_vote(candidate* c[], int s)//cast vote to mna/mpa
-{
-    if(hasvoted)
-    {
-        cout << "You have already voted.\n";
-        return;
+bool voter::signupToPendingFile() {
+    ifstream read;
+    read.open("Voter ID.txt");
+    if (!read.is_open()) {
+        cout << "Error opening file\n"; return 0;
     }
-    cout << "Candidates List:\n";
-    for (int i = 0; i < s; i++) {
-        cout << i + 1 << ". ";
-        cout << c[i];
-    }
-    int choice;
-    cout << "Enter your choice: ";
-    cin >> choice;
-    if (choice >= 1 && choice <= s) {
-        c[choice - 1]->addVote();
-        hasvoted = true;
-        cout << "Vote cast successfully.\n";
+    read >> id;
+    read.close();
+
+    cin >> *this;
+    read.open("Voters.txt");
+    if (!read.is_open()) {
+        cout << "Error opening Voters file\n"; return 0;
+
     }
     else {
-        cout << "Invalid choice.\n";
-    }
-}
 
+        string vid, vname, vnic, vage, pass, pv, nv, code1, code2;
+        while (getline(read, vid)) {
+            getline(read, vname);
+            getline(read, vnic);
+            getline(read, pass);
+            getline(read, vage);
+            read >> code1;
+            read >> code2;
+            read >> pv;
+            read >> nv;
+            if (cnic == vnic) {
+                system("cls");
+                Sleep(500);
+                cout << "Voter With This NIC " << vnic << " Already Present! \n";
+
+                read.close();
+                return 0;
+            }
+        }
+
+    }
+
+    ofstream fout("Voters.txt", ios::app);
+    if (!fout) {
+        cout << "Error: Cannot open to write pending voter in file.\n";
+        return 0;
+    }
+    if (age >= 18) {
+        fout << id++ << '\n' << name << '\n' << cnic << '\n' << password << '\n'
+            << age << '\n'
+            << cons.getcode() << '\n' << cons.getNcode() << '\n'  // code fields should come here
+            << 0 << '\n' << 0 << '\n';
+        fout.close();
+        fout.open("Voter ID.txt");
+        if (!fout) {
+            cout << "Error: Cannot open voter id file.\n";
+            return 0;
+        }
+        fout << id << endl;
+        return 1;
+    }
+    else {
+        system("cls");
+        Sleep(500);
+        cout << "Not elligible to vote.\nAge less than 18\n";
+        return 0;
+    }
+
+    fout.close();
+}
+ostream& operator<<(ostream& out, voter& v) {
+    out << "Voter ID: " << v.id << endl;
+    v.outputUserData();
+
+    out << "Age: " << v.age << endl;
+    out << "Has Voted: " << (v.Phasvoted ? "Yes" : "No") << endl;
+    out << "Has Voted: " << (v.Nhasvoted ? "Yes" : "No") << endl;
+    out << "Codes: \nMPA code: " << v.cons.getcode() << "\t MNA code: " << v.cons.getNcode();
+    return out;
+}
+void voter::setVoterCode(Code c) { cons = c; }
+Code voter::getVoterCode() const { return cons; }
