@@ -13,12 +13,14 @@ protected:
 public:
     national_election();
     int getPartySeats(int index);
-    void getwinnerParty();
+    void select_cand()override;
     string getPrimeMinister();
-    void cast_vote(int ID);
     void addVoter();
-    void regvoter();
-    void cast_Vote(voter* v);
+    bool cast_Voteforpm()override;
+    void selectVoter();
+    void regCandidate(string filename, string id, string pos)override;
+    void readparty();
+    bool loginMNA(string c)override;
     ~national_election();
 };
 
